@@ -17,7 +17,9 @@ Things that have been changed or improved from the original plugin to tailor it 
 - Improved logging and error recovery
 - Updated the plugin to BepInEx, you need version 5.0.1 at least, check out "MaidEx AIO"
 
-I fixed a few bugs I encountered. Those fixes are in this repository. **PLEASE NOTE:** To fix some issues, I had to modify the inner workings of the PMX B exporter, so I have no clue if that exporter will even provide models actually usable in MMD anymore. If you want a model that will 100% work with MMD, use the plugin from the repo that this one is forked from.
+I fixed a few bugs I encountered. Those fixes are in this repository.
+
+**PLEASE NOTE:** To fix some issues, I had to modify the inner workings of the PMX B exporter, so I have no clue if that exporter will even provide models actually usable in MMD anymore. If you're just looking to pop the .pmx into Blender or something and fix the models up manually, then it still works just fine for that. If you want a model that will 100% work with MMD, use the plugin from the repo that this one is forked from.
 
 Installation
 -------------------------------------------------------------------------------
@@ -27,9 +29,8 @@ Usage
 -------------------------------------------------------------------------------
 Once you're in game and have made it to the initial Maid customization screen, press the `F8` key on your keyboard to activate the Model Export MMD window.
 
-From the export window you may select your export folder on the filesystem, the model file base name and your desired export format (either MMD A, B or OBJ). MMD A exports with English names for bones and morphs, MMD B exports with Japanese names. There are some more differences between them, but MMD B is from a random mod I found on hongfire, so I'm not sure exactly what else it does. Try one or the other, see which works for you. You can manually enter in the export folder file path and model base name using your keyboard or use the file browser dialog by pressing the `Browse` button. Before you export, ensure that you press the `Apply T-Pose` button to force your Maid into a fixed T-pose. Finally, click the `Export` button to export your Maid to the filesystem, or click `Close` to cancel the export process and close the window.
+From the export window you may select your export folder on the filesystem, the model file base name and your desired export format (either PMX A, B or OBJ). PMX A exports with English names for bones and morphs, ~~PMX B exports with Japanese names.~~ PMX B now exports with English names for bones (I think) and morphs. There are some more differences between them, but PMX B is from a random mod github user pleaserespond found on hongfire, so I'm not sure exactly what else it does. Try one or the other, see which works for you. You can manually enter in the export folder file path and model base name using your keyboard or use the file browser dialog by pressing the `Browse` button. Before you export, ensure that you press the `Apply T-Pose` button to force your Maid into a fixed T-pose. Finally, click the `Export` button to export your Maid to the filesystem, or click `Close` to cancel the export process and close the window.
 
 Hacking
 -------------------------------------------------------------------------------
-There are two PMX exporters - PMX A and PMX B. PMX A is a further enhanced version of suiginsoft's PMX exporter with better bone rotation on export and morphs (aka blend shapes). PMX B is copy-pasted from a decompiled mod github user pleaserespond found on hongfire, stating "I don't know its author. I'm not sure exactly what's going on in that code, but it's a bit spaghetti."
-Indeed, the code is pretty spaghetti.
+There are two PMX exporters - PMX A and PMX B. PMX A is a further enhanced version of suiginsoft's PMX exporter with better bone rotation on export and morphs (aka blend shapes). PMX B is copy-pasted then slightly modified from a decompiled mod github user pleaserespond found on hongfire. The code is pretty spaghetti, and my hacky modifications / bug fixes certainly don't help.

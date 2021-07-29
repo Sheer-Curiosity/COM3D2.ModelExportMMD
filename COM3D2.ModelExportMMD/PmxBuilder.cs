@@ -988,6 +988,9 @@ namespace COM3D2.ModelExportMMD
             pmxBone.Parent = FindBoneIndex("全ての親");
         }
 
+        // This shit function doesn't work like 90% of the time, so I just commented it out on line 1839.
+        // All it did was translate morph names to Japanese. So, as long as you don't give a shit about
+        // the morph names being in English, you don't need this function.
         public void ChangeMorphName()
         {
             if (FindBone("Bone_Face") != null)
