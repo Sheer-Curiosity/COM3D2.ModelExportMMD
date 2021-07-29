@@ -1,6 +1,6 @@
 COM3D2.ModelExportMMD
 -------------------------------------------------------------------------------
-A BepInEx plugin for COM3D2 1.48 and later that supports exporting your custom Maids as MikuMikuDance (MMD) or Wavefront (OBJ) models. This project was reverse engineered from the older CM3D2 ModelExportMMD plugin originally authored by 伊丽丝喵 and then heavily revised and reworked to fix a number of bugs and deficiences.
+A BepInEx plugin for COM3D2 1.48 and later that supports exporting your custom Maids as MikuMikuDance (MMD) or Wavefront (OBJ) models. This project was reverse engineered from the older CM3D2 ModelExportMMD plugin originally authored by 伊丽丝喵, then heavily revised and reworked to fix a number of bugs and deficiences by github user suginsoft.
 
 Things that have been changed or improved from the original plugin to tailor it for COM3D2:
 
@@ -17,6 +17,8 @@ Things that have been changed or improved from the original plugin to tailor it 
 - Improved logging and error recovery
 - Updated the plugin to BepInEx, you need version 5.0.1 at least, check out "MaidEx AIO"
 
+I simply fixed a few bugs I encountered. Those fixes are in this repository.
+
 Installation
 -------------------------------------------------------------------------------
 Extract the archive in BepInEx/plugins folder.
@@ -29,4 +31,5 @@ From the export window you may select your export folder on the filesystem, the 
 
 Hacking
 -------------------------------------------------------------------------------
-There are two PMX exporters - PMX A and PMX B. PMX A is a further enhanced version of suiginsoft's PMX exporter with better bone rotation on export and morphs (aka blend shapes). PMX B is copy-pasted from a decompiled mod I found on hongfire, I don't know its author. I'm not sure exactly what's going on in that code, but it's a bit spaghetti.
+There are two PMX exporters - PMX A and PMX B. PMX A is a further enhanced version of suiginsoft's PMX exporter with better bone rotation on export and morphs (aka blend shapes). PMX B is copy-pasted from a decompiled mod github user pleaserespond found on hongfire, stating "I don't know its author. I'm not sure exactly what's going on in that code, but it's a bit spaghetti."
+Indeed, the code is pretty spaghetti.

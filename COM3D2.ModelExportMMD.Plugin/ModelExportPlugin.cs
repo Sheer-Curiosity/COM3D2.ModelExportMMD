@@ -174,15 +174,22 @@ namespace COM3D2.ModelExportMMD.Plugin
                         throw new Exception($"Unknown model format: {args.Exporter}");
                 }
 
+                Debug.Log($"Exporter: {exporter}");
+
                 exporter.ExportFolder = args.Folder;
                 exporter.ExportName = args.Name;
                 exporter.SavePosition = args.SavePosition;
                 exporter.SaveTexture = args.SaveTexture;
+                Debug.Log($"Attempting export with:\n\nExporter: {exporter}\n\nMeshes: {meshes}");
                 exporter.Export(meshes);
             }
             catch (Exception error)
             {
-                Debug.LogError($"Error exporting {args.Exporter}: {error.Message}\n\nStack trace:\n{error.StackTrace}");
+                var debugMeshes = FindObjectsOfType<SkinnedMeshRenderer>()
+                    .Where(smr => smr.name != "obj1" && smr.name != "moza")
+                    .Distinct()
+                    .ToList();
+                Debug.LogError($"Error exporting {args.Exporter}: {error.Message}\n\nMaid: {GameMain.Instance.CharacterMgr.GetMaid(0)}\nMeshes: {debugMeshes}\n\nStack trace:\n{error.StackTrace}");
             }
         }
 

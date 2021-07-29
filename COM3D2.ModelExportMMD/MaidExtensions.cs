@@ -64,6 +64,7 @@ namespace COM3D2.ModelExportMMD.Extensions
             "Bip01 L Finger21",
             "Bip01 L Finger22",
             "Bip01 L Finger3",
+            "Bip01 L Finger31",
             "Bip01 L Finger32",
             "Bip01 L Finger4",
             "Bip01 L Finger41",
