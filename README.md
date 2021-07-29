@@ -17,7 +17,7 @@ Things that have been changed or improved from the original plugin to tailor it 
 - Improved logging and error recovery
 - Updated the plugin to BepInEx, you need version 5.0.1 at least, check out "MaidEx AIO"
 
-I simply fixed a few bugs I encountered. Those fixes are in this repository.
+I fixed a few bugs I encountered. Those fixes are in this repository. **PLEASE NOTE:** To fix some issues, I had to modify the inner workings of the PMX B exporter, so I have no clue if that exporter will even provide models actually usable in MMD anymore. If you want a model that will 100% work with MMD, use the plugin from the repo that this one is forked from.
 
 Installation
 -------------------------------------------------------------------------------
